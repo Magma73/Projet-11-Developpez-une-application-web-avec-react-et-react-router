@@ -1,0 +1,27 @@
+@import '../../style/colors.css';
+
+.footer{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    /* position: fixed;
+    width: 100%;
+    bottom: 0; */
+    padding: 3.875rem 0;
+    background-color: var(--tertiary-color);
+}
+.logo{
+    width:100%;
+    max-width:122px;
+}
+.copy{
+    font-size:0.75rem;
+    color:var(--secondary-color);
+    padding-top:2.125rem;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 1440px) {
+    .footer{padding: 4.125rem 0 1.813rem 0;}
+    .copy{font-size:1.5rem;}
+}

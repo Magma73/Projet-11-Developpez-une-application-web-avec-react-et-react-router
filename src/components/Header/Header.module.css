@@ -1,0 +1,32 @@
+@import '../../style/colors.css';
+
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+.logo{
+    width:100%;
+    max-width:155px;
+}
+.home, .about{
+    font-size:0.75rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.home{
+    padding-right:0.625rem;
+    text-decoration:underline;
+}
+.about:hover{
+    text-decoration: underline;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 1440px) {
+    .header{padding: 2.5rem 6.25rem;}
+    .logo{max-width:210px;}
+    .home, .about{font-size:1.5rem;text-transform: capitalize;}
+    .home{padding-right:3.563rem;}
+}
