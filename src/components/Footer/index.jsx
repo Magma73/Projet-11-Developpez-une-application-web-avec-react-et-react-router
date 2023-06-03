@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logo-kasa-footer.svg'
 import styles from './Footer.module.css'
 
 function Footer() {
@@ -7,8 +6,8 @@ function Footer() {
 
         <footer className={styles.footer}>
             <div>
-                <Link to="/">
-                    <img src={logo} alt='logo-kasa' className={styles.logo} />
+                <Link to='/'>
+                    <img src='./assets/logo-kasa-footer.svg' alt='logo-kasa' className={styles.logo} />
                 </Link>
             </div>
 
