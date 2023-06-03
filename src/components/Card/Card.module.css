@@ -1,7 +1,6 @@
 @import '../../style/colors.css';
 
 .card{
-    /* width:335px; */
     width: 100%;
     position:relative;
     margin:0.625rem 0;
