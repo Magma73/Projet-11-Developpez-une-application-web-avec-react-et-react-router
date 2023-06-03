@@ -6,13 +6,21 @@
     justify-content: space-between;
     padding: 1.25rem;
 }
+.containerLogo{
+    margin-right: 0.625rem;
+}
 .logo{
     width:100%;
     max-width:155px;
 }
+.nav{
+    display: flex;
+    flex-wrap:wrap;
+}
 .home, .about{
     font-size:0.75rem;
     color: var(--primary-color);
+    font-weight:500;
     text-transform: uppercase;
 }
 .home{

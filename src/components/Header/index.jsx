@@ -5,7 +5,7 @@ import styles from './Header.module.css'
 function Header() {
     return (
         <header className={styles.header}>
-            <div>
+            <div className={styles.containerLogo}>
                 <Link to="/">
                     <img src={logo} alt='logo-kasa' className={styles.logo} />
                 </Link>
