@@ -1,0 +1,38 @@
+@import '../../style/colors.css';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 12.438rem;
+}
+.title{
+    font-size:6rem;
+    color: var(--primary-color);
+    font-weight:700;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:1.125rem;
+    color: var(--primary-color);
+    font-weight:500;
+}
+.link{
+    font-size:0.875rem;
+    color: var(--primary-color);
+    font-weight:500;
+    text-decoration:underline;
+    padding-top: 8.313rem;
+    padding-bottom:14.688rem;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 1440px) {
+    .container{padding-top:10.875rem;}
+    .title{font-size:18rem;}
+    .text{flex-direction:row;font-size:2.25rem;}
+    .link{padding-top:11.375rem;padding-bottom:9.938rem;}
+}
