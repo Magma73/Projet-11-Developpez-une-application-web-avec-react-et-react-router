@@ -1,0 +1,14 @@
+@import '../../style/colors.css';
+
+.containerLogements{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.25rem;
+    border-radius: 25px;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 1440px) {
+    .containerLogements{flex-direction: row;flex-wrap:wrap;justify-content: center;margin: 6.25rem;padding:1.938rem 0.65rem;background: var(--backgroundLight);}
+}
