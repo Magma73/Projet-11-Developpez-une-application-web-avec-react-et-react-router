@@ -1,6 +1,7 @@
 // import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Card from '../../components/Card'
+import Banner from '../../components/Banner'
 import styles from './Home.module.css'
 
 function Home() {
@@ -26,15 +27,24 @@ function Home() {
     }
 
     return (
-        <div className={styles.containerLogements}>
-            {logementsList.map((logement, index) => (
-                <Card
-                    key={`${logement.name}-${index}`}
-                    id={logement.id}
-                    title={logement.title}
-                    cover={logement.cover}
+        <div>
+            <div className={styles.containerBanner}>
+                <Banner
+                    image='./assets/img/IMG_BANNER.png'
+                    alt='Falaises en bord de mer'
                 />
-            ))}
+
+            </div>
+            <div className={styles.containerLogements}>
+                {logementsList.map((logement, index) => (
+                    <Card
+                        key={`${logement.name}-${index}`}
+                        id={logement.id}
+                        title={logement.title}
+                        cover={logement.cover}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
