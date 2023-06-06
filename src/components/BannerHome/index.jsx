@@ -1,6 +1,6 @@
-import styles from './Banner.module.css'
+import styles from './BannerHome.module.css'
 
-function Banner({ image, alt }) {
+function BannerHome({ image, alt }) {
     return (
         <div className={styles.container}>
             <div className={styles.containerImage}>
@@ -13,4 +13,4 @@ function Banner({ image, alt }) {
     )
 }
 
-export default Banner
+export default BannerHome

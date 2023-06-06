@@ -36,7 +36,7 @@
 .containerTitle{
     width:100%;
     position:absolute;
-    transform: translateY(-160%);
+    transform: translateY(-163%);
     padding-left: 1rem;
     display: flex;
     justify-content: flex-start;
@@ -53,8 +53,8 @@
 
 /*** MEDIA QUERIES ***/
 @media (min-width: 1440px) {
-    .containerImage{ height: 223px; }
-    .image{object-position: 50% 50%;transform:unset}
-    .containerTitle{position: absolute; transform: translateY(-450%); display: flex;justify-content: center;}
+    .containerImage{ height: 223px; border-radius: 25px;}
+    .image{border-radius: 25px;object-position: 50% 50%;transform:unset}
+    .containerTitle{position: absolute;transform: translateY(-513%); display: flex;justify-content: center;}
     .title{flex-direction:row;font-size:3rem;}
 }
