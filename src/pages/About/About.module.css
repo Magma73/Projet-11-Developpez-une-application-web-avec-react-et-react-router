@@ -1,0 +1,17 @@
+@import '../../style/colors.css';
+
+.containerBanner{
+    padding: 0 1.25rem;
+}
+
+.containerCollapse{
+    display:flex;
+    flex-direction: column;
+    padding: 0.625rem 1.25rem;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 1440px) {
+    .containerBanner{ padding: 0 5.2rem 0 6.25rem;}
+    .containerCollapse{ padding: 1.2rem 13rem;}
+}
