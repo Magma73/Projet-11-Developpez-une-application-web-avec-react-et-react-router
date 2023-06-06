@@ -13,6 +13,6 @@
 
 /*** MEDIA QUERIES ***/
 @media (min-width: 1440px) {
-    .containerLogements{flex-direction: row;flex-wrap:wrap;justify-content: center;margin: 6.25rem;padding:1.938rem 0.65rem;background: var(--backgroundLight);}
-    .containerBanner{padding: 2.5rem 6.25rem;}
+    .containerLogements{flex-direction: row;flex-wrap:wrap;justify-content: center;margin: 1.25rem 5.2rem 2.25rem 6.25rem;padding:1.938rem 0.65rem;background: var(--backgroundLight);}
+    .containerBanner{padding: 1.2rem 5.2rem 1.438rem 6.25rem;}
 }

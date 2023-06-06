@@ -1,7 +1,7 @@
 // import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Card from '../../components/Card'
-import Banner from '../../components/Banner'
+import BannerHome from '../../components/BannerHome'
 import styles from './Home.module.css'
 
 function Home() {
@@ -29,11 +29,10 @@ function Home() {
     return (
         <div>
             <div className={styles.containerBanner}>
-                <Banner
+                <BannerHome
                     image='./assets/img/IMG_BANNER.png'
                     alt='Falaises en bord de mer'
                 />
-
             </div>
             <div className={styles.containerLogements}>
                 {logementsList.map((logement, index) => (
