@@ -1,0 +1,55 @@
+@import '../../style/colors.css';
+
+.button{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    margin:0.625rem 0;
+    padding: 0.344rem 0.719rem;
+    font-size:0.813rem;
+    font-weight:500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.159rem;
+    text-align:left;
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    border:none;
+    border-radius: 5px;
+}
+.span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:16px;
+}
+.icon{
+    width: 100%;
+}
+.text{
+    padding:1.66rem 0.438rem 3.313rem 0.719rem;
+    font-size:0.75rem;
+    font-weight:400;
+    color: var(--primary-color);
+    line-height: 1.069rem;
+}
+.toggle{
+    position: relative;
+    top: -18px;
+    /* overflow: hidden; */
+    z-index: -1;
+    background: var(--backgroundLight);
+    border-radius: 5px;
+}
+.rotate {
+    transform: rotate(180deg);
+  }
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 1440px) {
+    .button{font-size:1.5rem;margin: 0.75rem 0 1.2rem 0;padding: 0.4rem 1.15rem;line-height: 2.139rem;}
+    .span{width: 24px;margin-right: 16px;}
+    .text{padding:1.66rem 1.125rem 0.45rem 1.1rem;font-size:1.5rem;line-height: 2.139rem;}
+}
+
