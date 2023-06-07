@@ -1,0 +1,10 @@
+@import '../../style/colors.css';
+
+.containerLogements{
+    padding-top: 0.813rem;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 1440px) {
+    .containerLogements{padding-top: 0;}
+}
