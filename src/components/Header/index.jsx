@@ -8,7 +8,7 @@ function Header() {
         <header className={styles.header}>
             <div className={styles.containerLogo}>
                 <Link to='/'>
-                    <img src='./assets/logo-kasa-header.svg' alt='logo-kasa' className={styles.logo} />
+                    <img src='/assets/logo-kasa-header.svg' alt='logo-kasa' className={styles.logo} />
                 </Link>
             </div>
 

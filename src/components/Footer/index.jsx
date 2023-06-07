@@ -7,7 +7,7 @@ function Footer() {
         <footer className={styles.footer}>
             <div>
                 <Link to='/'>
-                    <img src='./assets/logo-kasa-footer.svg' alt='logo-kasa' className={styles.logo} />
+                    <img src='/assets/logo-kasa-footer.svg' alt='logo-kasa' className={styles.logo} />
                 </Link>
             </div>
 
