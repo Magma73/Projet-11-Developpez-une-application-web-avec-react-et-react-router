@@ -21,7 +21,15 @@ function Collapse({ label, text }) {
 
             {open && (
                 <div className={styles.toggle}>
-                    <p className={styles.text}>{text}</p>
+                    {typeof text === 'string' ? (
+                        <p className={styles.text}>{text}</p>
+                    ) : (
+                        <ul className={styles.list}>
+                            {text.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
             )}
         </div>

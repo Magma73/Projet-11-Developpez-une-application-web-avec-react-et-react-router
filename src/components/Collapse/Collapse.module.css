@@ -9,7 +9,6 @@
     padding: 0.344rem 0.719rem;
     font-size:0.813rem;
     font-weight:500;
-    font-family: 'Montserrat', sans-serif;
     line-height: 1.159rem;
     text-align:left;
     color: var(--secondary-color);
@@ -28,6 +27,15 @@
     width: 100%;
 }
 .text{
+    padding:1.66rem 0.438rem 3.313rem 0.719rem;
+    font-size:0.75rem;
+    font-weight:400;
+    color: var(--primary-color);
+    line-height: 1.069rem;
+}
+.list{
+    display:flex;
+    flex-direction: column;
     padding:1.66rem 0.438rem 3.313rem 0.719rem;
     font-size:0.75rem;
     font-weight:400;
