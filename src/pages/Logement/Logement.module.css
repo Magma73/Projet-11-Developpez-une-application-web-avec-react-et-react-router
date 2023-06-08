@@ -1,10 +1,80 @@
 @import '../../style/colors.css';
 
-.containerLogements{
+.containerMain{
     padding-top: 0.813rem;
+}
+.containerInfos{
+    margin: 0.55rem 1.25rem;
+}
+.containerTitleTagsProfilRating{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    color:var(--primary-color);
+    font-size:1.125rem;
+    font-weight: 500;
+    line-height: 1.604rem;
+}
+.location{
+    color:var(--primary-color);
+    font-size:0.875rem;
+    font-weight: 500;
+    line-height: 1.604rem;
+    padding-top: 0.35rem;
+}
+.containerTags{
+    padding-top: 0.35rem;
+}
+.containerRatingProfil{
+    display: flex;
+    justify-content: space-between;
+}
+.containerRating{
+    display: flex;
+    margin-top: 0.55rem;
+}
+.containerProfil{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    display:flex;
+    flex-direction: column;
+    color:var(--primary-color);
+    font-size:0.75rem;
+    font-weight: 500;
+    line-height: 1.069rem;
+    text-align: right;
+    padding-right:0.625rem;
+}
+.photo{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+}
+.containerDescriptionEquipments{
+    display: flex;
+    flex-direction: column;
+}
+.containerDescription,.containerEquipments{
+    margin-top:1.25rem;
 }
 
 /*** MEDIA QUERIES ***/
 @media (min-width: 1440px) {
-    .containerLogements{padding-top: 0;}
+    .containerMain{padding-top: 0;}
+    .title{font-size:2.25rem;}
+    .location{font-size:1.125rem;padding-top: 0.85rem;}
+    .containerInfos{margin: 2.65rem 5.2rem 2.65rem 6.25rem;}
+    .containerTitleTagsProfilRating{display: flex;flex-direction: row;justify-content: space-between;}
+    .containerTags{padding-top: 1.25rem;}
+    .containerRatingProfil{flex-direction: column-reverse;justify-content: flex-end;align-items: end;margin-top: -19px;}
+    .containerRating{margin-top: 1.75rem;}
+    .name{font-size:1.125rem;}
+    .photo{width: 4rem;height: 4rem;border-radius: 4rem;}
+    .containerDescriptionEquipments{flex-direction: row;justify-content: space-between;}
+    .containerDescription,.containerEquipments{flex: 50%;margin-top:0.1rem;}
+    .containerDescription{margin-right: 4.65rem;}
 }
