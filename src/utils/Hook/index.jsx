@@ -10,7 +10,9 @@ function UseFetch(url) {
         setLoading(true)
         async function fetchLogements() {
             try {
-                const response = await fetch(`http://localhost:3000/datas/logements.json`)
+                // const response = await fetch(`http://localhost:3000/datas/logements.json`)
+                const response = await fetch(url);
+
                 const logementsList = await response.json()
                 setLogementsList(logementsList)
             } catch (err) {
