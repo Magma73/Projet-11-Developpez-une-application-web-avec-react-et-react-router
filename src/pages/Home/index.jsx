@@ -1,53 +1,47 @@
-// import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
 import Card from '../../components/Card'
-import BannerHome from '../../components/BannerHome'
+import Banner from '../../components/Banner'
+import Loader from '../../components/Loader'
+import UseFetch from '../../utils/Hook'
 import styles from './Home.module.css'
 
 function Home() {
-    const [error, setError] = useState(false)
-    const [logementsList, setLogementsList] = useState([])
-
-    useEffect(() => {
-        async function fetchLogements() {
-            try {
-                const response = await fetch(`http://localhost:3000/datas/logements.json`)
-                const logementsList = await response.json()
-                setLogementsList(logementsList)
-            } catch (err) {
-                console.log('===== error =====', err)
-                setError(true)
-            }
-        }
-        fetchLogements()
-    }, [])
+    const { logementsList, isLoading, error } = UseFetch("/datas/logements.json");
 
     if (error) {
         return <span>Oups il y a eu un problème</span>
     }
 
-    return (
-        <div>
-            <div className={styles.containerBanner}>
-                <BannerHome
-                    image='./assets/img/IMG_BANNER.png'
-                    alt='Falaises en bord de mer'
-                />
+    if (isLoading) {
+        return (
+            <div className={styles.containerLoader}>
+                <Loader />
             </div>
-            <div className={styles.containerLogements}>
-                {logementsList.map((logement, index) => (
-                    <Card
-                        key={`${logement.name}-${index}`}
-                        id={logement.id}
-                        title={logement.title}
-                        cover={logement.cover}
+        );
+
+    } else {
+        return (
+            <div>
+                <div className={styles.containerBanner}>
+                    <Banner
+                        image='./assets/img/IMG_BANNER.png'
+                        alt='Falaises en bord de mer'
+                        page="home"
                     />
-                ))}
+                </div>
+
+                <div className={styles.containerLogements}>
+                    {logementsList.map((logement, index) => (
+                        <Card
+                            key={`${logement.name}-${index}`}
+                            id={logement.id}
+                            title={logement.title}
+                            cover={logement.cover}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Home
-
-

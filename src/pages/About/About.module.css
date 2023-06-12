@@ -1,5 +1,8 @@
 @import '../../style/colors.css';
 
+.containerMain{
+    margin-bottom:14rem;
+}
 .containerBanner{
     padding: 0 1.25rem;
 }
