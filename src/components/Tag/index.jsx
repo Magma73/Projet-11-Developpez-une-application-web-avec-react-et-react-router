@@ -1,5 +1,3 @@
-// import { useParams } from 'react-router-dom'
-// import { useEffect, useState } from 'react'
 import styles from './Tag.module.css'
 
 function Tag({ tags }) {

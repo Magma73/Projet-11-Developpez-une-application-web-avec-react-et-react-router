@@ -32,9 +32,6 @@ a:hover, a:hover{
 .home:hover, .about:hover{
     color: var(--backgroundStar);
 }
-/* .home:hover, .about:hover{
-    color: var(--primary-color);
-} */
 
 /*** MEDIA QUERIES ***/
 @media (min-width: 1440px) {

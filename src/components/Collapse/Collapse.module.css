@@ -45,7 +45,6 @@
 .toggle{
     position: relative;
     top: -18px;
-    /* overflow: hidden; */
     z-index: -1;
     background: var(--backgroundLight);
     border-radius: 5px;
@@ -61,4 +60,3 @@
     .text{padding:1.66rem 1.125rem 0.45rem 1.1rem;font-size:1.5rem;line-height: 2.139rem;}
     .list{font-size:1.5rem;line-height: 2.139rem;}
 }
-
