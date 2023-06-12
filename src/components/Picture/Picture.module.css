@@ -4,7 +4,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    /* transition: transform 0.3s ease-in-out; */
     overflow: hidden;
 }
 .image{
@@ -14,19 +13,11 @@
     border-radius: 10px;
 }
 .containerNumberText{
-    display:flex;
-    align-items: center;
-    position:absolute;
-    top: 86%;
-    left: 47%;
-    color:var(--secondary-color);
-    font-size:0.75rem;
-    font-weight: 500;
-    line-height: 1.6rem;
+    display:none;
 }
 
 /*** MEDIA QUERIES ***/
 @media (min-width: 1440px) {
     .image{border-radius:25px;}
-    .containerNumberText{font-size:1.125rem;top: 88%;left: 49%;}
+    .containerNumberText{display:flex; align-items: center; position:absolute;top: 88%;left: 49%;font-size:1.125rem; font-weight: 500;line-height: 1.6rem;color:var(--secondary-color);}
 }
