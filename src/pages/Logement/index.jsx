@@ -1,39 +1,36 @@
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-// import Picture from '../../components/Picture'
+import { Navigate } from "react-router-dom";
 import Slideshow from '../../components/Slideshow'
 import Collapse from '../../components/Collapse'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
+import Loader from '../../components/Loader'
+import UseFetch from '../../utils/Hook'
 import styles from './Logement.module.css'
 
 function Logement() {
-    const { id } = useParams()
-    console.log({ id })
-    const [error, setError] = useState(false)
-    const [logementsList, setLogementsList] = useState([])
-
-    useEffect(() => {
-        async function fetchLogements() {
-            try {
-                const response = await fetch(`http://localhost:3000/datas/logements.json`)
-                const logementsList = await response.json()
-                setLogementsList(logementsList)
-            } catch (err) {
-                console.log('===== error =====', err)
-                setError(true)
-            }
-        }
-        fetchLogements()
-    }, [])
+    const { id } = useParams();
+    const { logementsList, isLoading, error } = UseFetch("/datas/logements.json");
 
     if (error) {
-        return <span>Oups il y a eu un problème</span>
+        return <span>Oups il y a eu un problème</span>;
     }
 
-    const logementData = logementsList.find(item => item.id === id);
+    if (isLoading) {
+        return (
+            <div className={styles.containerLoader}>
+                <Loader />
+            </div>
+        );
 
-    if (logementData) {
+    } else {
+        const logementData = logementsList.find(item => item.id === id);
+
+
+        if (logementData === undefined) {
+            return <Navigate to="/error" />;
+        }
+
         const { title, pictures, host, description, rating, location, equipments, tags } = logementData;
         const nameParts = host.name.split(' ');
         const firstName = nameParts[0];
@@ -75,10 +72,10 @@ function Logement() {
                     <div className={styles.containerDescriptionEquipments}>
 
                         <div className={styles.containerDescription}>
-                            <Collapse label="Description" text={description} />
+                            <Collapse page="logement" label="Description" text={description} />
                         </div>
                         <div className={styles.containerEquipments}>
-                            <Collapse label="Équipements" text={equipments} />
+                            <Collapse page="logement" label="Équipements" text={equipments} />
                         </div>
 
                     </div>
@@ -87,12 +84,7 @@ function Logement() {
                 </div >
             </div >
         );
-    } else {
-        return <span>Logement introuvable</span>;
     }
-
-
 }
 
-
-export default Logement
+export default Logement;

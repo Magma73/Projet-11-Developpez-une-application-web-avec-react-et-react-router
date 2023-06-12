@@ -1,7 +1,21 @@
 @import '../../style/colors.css';
-
+.containerLoader{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index:3;
+    background-color: rgba(var(--backgroundLight), 1);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
 .containerMain{
     padding-top: 0.813rem;
+    padding-bottom: 1.25rem;
+    margin-bottom:12.5rem;
 }
 .containerInfos{
     margin: 0.55rem 1.25rem;
@@ -29,15 +43,17 @@
 .containerRatingProfil{
     display: flex;
     justify-content: space-between;
+    margin-top: 0.25rem;
 }
 .containerRating{
     display: flex;
-    margin-top: 0.55rem;
+    flex:70%;
 }
 .containerProfil{
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    flex:30%;
 }
 .name{
     display:flex;
@@ -57,9 +73,7 @@
 .containerDescriptionEquipments{
     display: flex;
     flex-direction: column;
-}
-.containerDescription,.containerEquipments{
-    margin-top:1.25rem;
+    margin-top:0.4rem;
 }
 
 /*** MEDIA QUERIES ***/
@@ -71,10 +85,11 @@
     .containerTitleTagsProfilRating{display: flex;flex-direction: row;justify-content: space-between;}
     .containerTags{padding-top: 1.25rem;}
     .containerRatingProfil{flex-direction: column-reverse;justify-content: flex-end;align-items: end;margin-top: -19px;}
-    .containerRating{margin-top: 1.75rem;}
+    .containerRating{margin-top: 0.2rem;flex:50%;}
+    .containerProfil{flex:50%;}
     .name{font-size:1.125rem;}
     .photo{width: 4rem;height: 4rem;border-radius: 4rem;}
-    .containerDescriptionEquipments{flex-direction: row;justify-content: space-between;}
+    .containerDescriptionEquipments{flex-direction: row;justify-content: space-between;margin-top:0;}
     .containerDescription,.containerEquipments{flex: 50%;margin-top:0.1rem;}
     .containerDescription{margin-right: 4.65rem;}
 }
