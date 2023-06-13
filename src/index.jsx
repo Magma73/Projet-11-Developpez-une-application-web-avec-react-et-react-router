@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
+import Error from './pages/Error';
 import Logement from './pages/Logement';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Error from './components/Error';
 import styles from './Index.module.css';
 
 createRoot(document.getElementById('root')).render(
