@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function UseFetch(url) {
+function useFetch(url) {
     const [logementsList, setLogementsList] = useState([])
     const [isLoading, setLoading] = useState(true)
     const [error, setError] = useState(false)
@@ -10,9 +10,7 @@ function UseFetch(url) {
         setLoading(true)
         async function fetchLogements() {
             try {
-                // const response = await fetch(`http://localhost:3000/datas/logements.json`)
                 const response = await fetch(url);
-
                 const logementsList = await response.json()
                 setLogementsList(logementsList)
             } catch (err) {
@@ -27,4 +25,4 @@ function UseFetch(url) {
     return { isLoading, logementsList, error }
 }
 
-export default UseFetch
+export default useFetch

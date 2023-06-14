@@ -5,12 +5,12 @@ import Collapse from '../../components/Collapse'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
 import Loader from '../../components/Loader'
-import UseFetch from '../../utils/Hook'
+import useFetch from '../../utils/hooks'
 import styles from './Logement.module.css'
 
 function Logement() {
     const { id } = useParams();
-    const { logementsList, isLoading, error } = UseFetch("/datas/logements.json");
+    const { logementsList, isLoading, error } = useFetch("/datas/logements.json");
 
     if (error) {
         return <span>Oups il y a eu un problème</span>;

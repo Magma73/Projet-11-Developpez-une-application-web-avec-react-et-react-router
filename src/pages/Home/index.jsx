@@ -1,11 +1,11 @@
 import Card from '../../components/Card'
 import Banner from '../../components/Banner'
 import Loader from '../../components/Loader'
-import UseFetch from '../../utils/Hook'
+import useFetch from '../../utils/hooks'
 import styles from './Home.module.css'
 
 function Home() {
-    const { logementsList, isLoading, error } = UseFetch("/datas/logements.json");
+    const { logementsList, isLoading, error } = useFetch("/datas/logements.json");
 
     if (error) {
         return <span>Oups il y a eu un problème</span>
