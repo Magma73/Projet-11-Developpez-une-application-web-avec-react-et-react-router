@@ -26,14 +26,6 @@
     object-fit: cover;
     border-radius: 10px;
 }
-.containerTitle{
-    width:100%;
-    position:absolute;
-    transform: translateY(-160%);
-    padding-left: 1rem;
-    display: flex;
-    justify-content: flex-start;
-}
 .title{
     color: var(--secondary-color);
     font-size:1.5rem;
