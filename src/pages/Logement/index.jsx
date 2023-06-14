@@ -26,7 +26,6 @@ function Logement() {
     } else {
         const logementData = logementsList.find(item => item.id === id);
 
-
         if (logementData === undefined) {
             return <Navigate to="/error" />;
         }
@@ -41,11 +40,8 @@ function Logement() {
                 <div className={styles.containerSlide}>
                     <Slideshow pictures={pictures} title={title} />
                 </div>
-
                 <div className={styles.containerInfos}>
-
                     <div className={styles.containerTitleTagsProfilRating}>
-
                         <div className={styles.containerTitleTags}>
                             <div className={styles.containerTitle}>
                                 <h1 className={styles.title}>{title}</h1>
@@ -55,7 +51,6 @@ function Logement() {
                                 <Tag tags={tags} />
                             </div>
                         </div>
-
                         <div className={styles.containerRatingProfil}>
                             <div className={styles.containerRating}>
                                 <Rating rating={rating} />
@@ -65,22 +60,15 @@ function Logement() {
                                 <img className={styles.photo} src={host.picture} alt={host.name} />
                             </div>
                         </div>
-
                     </div>
-
-
                     <div className={styles.containerDescriptionEquipments}>
-
                         <div className={styles.containerDescription}>
                             <Collapse page="logement" label="Description" text={description} />
                         </div>
                         <div className={styles.containerEquipments}>
                             <Collapse page="logement" label="Équipements" text={equipments} />
                         </div>
-
                     </div>
-
-
                 </div >
             </div >
         );
