@@ -7,7 +7,7 @@ Le site de Kasa a été codé il y a maintenant plus de 10 ans en http://ASP.NET
 
 ## Mission du projet
 
-La mission pour ce projet était de faire la refonte du site de Kasa : développer l’ensemble de l’application, les pages les composants React et les routes React Router.
+La mission pour ce projet était de faire la refonte du site de Kasa : développer l’ensemble de l’application, les pages, les composants React et les routes React Router.
 
 ## Technologies utilisées
 
@@ -29,7 +29,7 @@ La base des maquettes a été créée via [Figma](https://www.figma.com/file/bAn
 
 ## Notes et contraintes du projet
 
-**Polices et icône :**
+**Police :**
 
 - Polices : [DM Sans ](https://fonts.google.com/specimen/DM+Sans?query=dm+sans)
 
@@ -42,22 +42,20 @@ La base des maquettes a été créée via [Figma](https://www.figma.com/file/bAn
 
 **Contraintes :**
 
-- Techniques
+- Techniques (cf le ![guidline](/public/assets/maquettes/Coding+guidelines+Kasa+FR.pdf))
 
-  - Découpage en composants modulaires et réutilisables
-  - Un composant par fichier
-  - Structure logique des différents fichiers
-  - Utilisation des props entre les composants
-  - Utilisation du state dans les composants quand c'est nécessaire
-  - Gestion des événements
-  - Utilisation de la méthode map
+  - Réaliser des composants modulaires et réutilisables
+  - Faire un composant par fichier
+  - Structurer logiquement les différents fichiers
+  - Utiliser des props entre les composants
+  - Utiliser du state dans les composants quand c'est nécessaire
+  - Gérer les événements
+  - Utiliser la méthode map
   - Privilégier les composants fonctionnels plutôt que des composants classes
-  - Les paramètres des routes sont gérés par React Router dans l'URL pour récupérer les informations de chaque logement
-  - Une page par route
-  - La page 404 est renvoyée pour chaque route inexistante, ou si une valeur présente dans l’URL ne fait pas partie des données renseignées
-  - La logique du routeur est réunie dans un seul fichier
-
-Consulter le ![guidline](/public/assets/maquettes/Coding+guidelines+Kasa+FR.pdf)
+  - Gérer les paramètres des routes avec React Router dans l'URL et récupérer les informations de chaque logement
+  - Créer une page par route
+  - Renvoyer la page 404 pour chaque route inexistante, ou si une valeur présente dans l’URL ne fait pas partie des données renseignées
+  - Réunir la logique du routeur dans un seul fichier
 
 - Approche et maquettes
 
@@ -77,4 +75,4 @@ Sinon, vous pouvez également cloner le projet :
 
 `https://github.com/Magma73/Projet-11-Developpez-une-application-web-avec-react-et-react-router.git`
 
-Accédez au répertoire du projet : utilisez la commande `npm install` pour installer les dépendances du projet et `npm start` pour ouvrir l'application dans votre navigateur.
+Accédez au répertoire du projet puis utilisez la commande `npm install` pour installer les dépendances du projet et `npm start` pour ouvrir l'application dans votre navigateur.
