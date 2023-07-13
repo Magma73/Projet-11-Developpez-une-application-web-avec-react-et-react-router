@@ -69,7 +69,7 @@ La base des maquettes a été créée via [Figma](https://www.figma.com/file/bAn
 
 ## Tester le projet
 
-Pour tester simplement et rapidement le projet, vous pouvez visiter la démo en ligne : https://lucky-sable-03032a.netlify.app/
+Pour tester simplement et rapidement le projet, vous pouvez visiter la démo en ligne : https://kasa-marine-magnin.netlify.app/
 
 Sinon, vous pouvez également cloner le projet :
 
