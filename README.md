@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Projet 11 - Développez une application Web avec React et React Router
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Contexte du projet
 
-## Available Scripts
+Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant. Avec plus de 500 annonces postées chaque jour Kasa fait partie des leaders de la location d’appartements entre particuliers en France.
+Le site de Kasa a été codé il y a maintenant plus de 10 ans en http://ASP.NET avec un code legacy important. Aujourd’hui, Kasa souhaite passer à une stack complète en JavaScript avec NodeJS côté Back-end, et React côté Front-end. Kasa en a également profité pour commander de nouvelles maquettes auprès de son designer habituel.
 
-In the project directory, you can run:
+## Mission du projet
 
-### `yarn start`
+La mission pour ce projet était de faire la refonte du site de Kasa : développer l’ensemble de l’application, les pages les composants React et les routes React Router.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies utilisées
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React : pas de librairie React externe
+- React Router : gérer les routes
+- Modules CSS : gérer le css
+- Prettier : mettre en forme le code
+- ESLint : indiquer les erreurs et sécuriser le code
+- Figma : consulter les maquettes
+- Github : versionner le code
 
-### `yarn test`
+## Maquettes à respecter
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La base des maquettes a été créée via [Figma](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/ARCHIVE-UI-Design-Kasa-FR?type=design&node-id=75-109&t=klBWtEHHrFVTx8Y3-0).
 
-### `yarn build`
+### Page d'accueil
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Maquette Kasa accueil](/public/assets/maquettes/D_Home.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Notes et contraintes du projet
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Polices et icône :**
 
-### `yarn eject`
+- Polices : [DM Sans ](https://fonts.google.com/specimen/DM+Sans?query=dm+sans)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Couleurs :**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Rouge : #FF6060
+- Gris : #F6F6F6
+- Noir : #000000
+- Blanc : #FFFFFF
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Contraintes :**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Techniques
 
-## Learn More
+  - Découpage en composants modulaires et réutilisables
+  - Un composant par fichier
+  - Structure logique des différents fichiers
+  - Utilisation des props entre les composants
+  - Utilisation du state dans les composants quand c'est nécessaire
+  - Gestion des événements
+  - Utilisation de la méthode map
+  - Privilégier les composants fonctionnels plutôt que des composants classes
+  - Les paramètres des routes sont gérés par React Router dans l'URL pour récupérer les informations de chaque logement
+  - Une page par route
+  - La page 404 est renvoyée pour chaque route inexistante, ou si une valeur présente dans l’URL ne fait pas partie des données renseignées
+  - La logique du routeur est réunie dans un seul fichier
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Consulter le ![guidline](/public/assets/maquettes/Coding+guidelines+Kasa+FR.pdf)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Approche et maquettes
 
-### Code Splitting
+  - Approche : mobile first
+  - Maquette desktop : oui
+  - Maquette tablette : à improviser
+  - Maquette mobile : oui
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Validateurs
+  - Aucune erreur ou warning dans la console
 
-### Analyzing the Bundle Size
+## Tester le projet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Pour tester simplement et rapidement le projet, vous pouvez visiter la démo en ligne : https://lucky-sable-03032a.netlify.app/
 
-### Making a Progressive Web App
+Sinon, vous pouvez également cloner le projet :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`https://github.com/Magma73/Projet-11-Developpez-une-application-web-avec-react-et-react-router.git`
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Accédez au répertoire du projet : utilisez la commande `npm install` pour installer les dépendances du projet et `npm start` pour ouvrir l'application dans votre navigateur.
